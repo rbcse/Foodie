@@ -1,0 +1,472 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:2rem;
+    width:100%;
+}
+
+.first_section {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgba(41, 40, 40, 0.7), rgba(34, 32, 32, 0.7)), url('../images/tasty-homemade-sandwich-tomatoes-pepper-wooden-board-onions-tomato-with-stem-chicken-nuggets-dark-color-surface.jpg');
+    background-position: center;
+    background-size: 100% 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top:0;
+    padding:1rem;
+}
+
+nav .logo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:40%;
+    color:white;
+    gap:0.1rem;
+    padding-right:16rem;
+}
+
+nav .logo img{
+    width:18%;
+    float:left;
+}
+
+nav .logo h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:2rem;
+}
+
+nav .nav_icons{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 14rem;
+}
+
+nav .nav_icons a{
+    color:white;
+    text-decoration: none;
+    margin-left:4rem;
+    float:left;
+    font-size:1.1rem;
+}
+.nav_icons a img{
+    width:50%;
+}
+
+nav .nav_icons a:hover{
+    cursor:pointer;
+    color:orange;
+}
+
+nav.scrolled{
+    z-index:1000;
+    background-color: black;
+}
+
+.search_section , .search_section form{
+    margin:auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:0.3rem;
+    width:100%;
+}
+
+.search_section input{
+    padding:0.9rem 2rem;
+    width:40%;
+    border-radius:5px;
+    font-size:1.4rem;
+    border:2px double orange;
+    border-radius:5rem;
+}
+
+.search_section button{
+    padding:1rem 1.4rem;
+    background-color: orange;
+    color:white;
+    font-size:1.2rem;
+    font-weight:bolder;
+    border:none;
+    border-radius:2rem;
+    cursor:pointer;
+}
+
+
+.second_section , .second_section .food_card{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+    width:100%;
+}
+
+.second_section .food_card{
+    flex-direction: column;
+    width:20%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius:5px;
+    padding-bottom: 1.4rem;
+    overflow: hidden;
+}
+
+
+.second_section .food_card img{
+    width:100%;
+    height:15rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 130px;
+    border-bottom-right-radius: 130px;
+    object-fit: cover;
+    transition:transform 0.5s ease-in-out;
+}
+
+.second_section .food_card:hover img {
+    cursor: pointer;
+    transform:scale(1.1);
+}
+
+
+.second_section .food_card button{
+    padding:0.8rem 3rem;
+    width:100%;
+    background-color: black;
+    color:white;
+    border:none;
+    font-size:1rem;
+    font-weight:bolder;
+    border-radius:3px;
+}
+
+.about_section{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:2rem 6rem;
+    gap:2rem;
+}
+
+.about_section p{
+    line-height: 2rem;
+}
+
+.about_section span{
+    color:orange;
+    font-weight:bolder;
+}
+
+.contact_section{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:3rem;
+    width:100%;
+}
+
+.contact_section .image_contact{
+    width:50%;
+}
+
+.contact_section .image_contact img{
+    width:100%;
+}
+
+.contact_section form{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:3rem;
+    width:50%;
+    flex-direction: column;
+}
+
+.contact_section form h1{
+    color:orangered
+}
+
+.contact_section form input , textarea{
+    width:68%;
+    padding:1.2rem 1rem;
+    border:none;
+    border-radius:6px;
+    background-color: rgba(243, 238, 238, 0.968);
+    font-size:1.2rem;
+}
+
+.contact_section form button{
+    padding:0.9rem 2rem;
+    width:68%;
+    background-color: orangered;
+    color:white;
+    font-weight:bolder;
+    border:none;
+    border-radius:8px;
+    cursor: pointer;
+}
+
+footer{
+    background-color: black;
+    color:white;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+    padding:3rem;
+}
+
+footer .left_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1.3rem;
+    flex-direction: column;
+    width:30%;
+}
+
+footer .left_section img{
+    width:100%;
+    height:13rem;
+}
+
+footer .left_section h2{
+    color:orange;
+    text-align: center;
+}
+
+footer .left_section .social_media{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:1.5rem;
+}
+
+footer .left_section .social_media a{
+    background-color: #ef6e12;
+    color:white;
+    padding:0.7rem;
+    border-radius:50%;
+}
+
+footer .left_section .social_media a:hover{
+    background-color: #f56803;
+}
+
+footer .left_section .social_media img{
+    width:100%;
+    height:2rem;
+    color:white;
+}
+
+.social_media img {
+    filter: brightness(0) invert(1);
+}
+
+footer .mid_section , .right_section{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:2rem;
+}
+
+footer .mid_section a , .right_section a{
+    color:white;
+    text-decoration: none;
+}
+
+footer .mid_section a:hover , .right_section a:hover{
+    color:orange;
+}
+
+nav .menu_bar img{
+    display: none;
+}
+
+@media (max-width:750px){
+    
+    nav{
+        width:100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding:2rem;
+    }
+    
+    nav .logo{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:50%;
+        color:white;
+        gap:0.1rem;
+        padding:1rem 2rem 1rem 6rem; 
+        /* padding-right:16rem; */
+    }
+    
+    nav .logo img{
+        width:100%;
+    }
+    
+    nav .logo h1{
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size:2rem;
+    }
+
+    nav .nav_icons a{
+        display:none;
+    }
+
+
+    nav .menu_bar img{
+        width:40%;
+        display:block;
+        margin-right:7rem;
+        position: relative;
+    }
+
+    .search_section form{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap:2rem;
+        width:100%;
+    }
+
+    .search_section form input{
+        width:100%;
+    }
+
+    .search_section form button{
+        width:60%;
+    }
+
+    .second_section{
+        flex-direction: column;
+    }
+
+    .second_section .food_card{
+        width:80%;
+    }
+
+    .about_section{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap:2rem;
+        width:100%;
+    }
+
+    .about_section h1{
+        text-align: center;
+    }
+
+    .about_section p{
+        width:100%;
+    }
+
+    .contact_section{
+        flex-direction: column;
+    }
+
+    .contact_section .image_contact{
+        width:100%;
+    }
+
+    .contact_section .image_contact img{
+        width:100%;
+        height:24rem;
+    }
+
+    .contact_section form{
+        width:100%;
+    }
+
+    footer{
+        flex-direction: column;
+        gap:3rem;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #000;
+    }
+    
+    .left_section, .mid_section, .right_section {
+        flex: 1;
+    }
+    
+    .logo_section {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .logo_section img {
+        width: 50px; /* Set appropriate width for the logo */
+        height: auto;
+        margin-right: 10px;
+    }
+    
+    .social_media {
+        display: flex;
+        gap: 10px; /* Add space between social media icons */
+    }
+    
+    footer .left_section .social_media a {
+        background-color: #ef6e12;
+        color: white;
+        padding: 1rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px; /* Set appropriate size for the icons */
+        height: 40px;
+    }
+    
+    footer .left_section .social_media img {
+        width: 24px; /* Set appropriate size for the images */
+        height: 24px;
+        color: white;
+    }
+    
+    .social_media img {
+        filter: brightness(0) invert(1);
+    }
+    
+
+}
