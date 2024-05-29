@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - foodie</title>
+    <link rel="stylesheet" href="/login.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="left_section">
+            <img src="../images/Mobile-login.jpg" alt="">
+        </div>
+
+        <form action="/userLogin" method="post">
+            <h1>Login to Foodie</h1>
+            <p>
+                <%= locals.error %>
+            </p>
+            <input type="email" name="userEmail" placeholder="Email" required>
+            <input type="password" name="userPassword" id="" placeholder="Password" required>
+            <div class="btns">
+                <button type="submit">Login</button>
+                <a href="/signup">Create account</a>
+            </div>
+            <p>Or</p>
+            <div class="other_option">
+                <a href="">Continue with Google</a>
+                <a href="">Continue with Facebook</a>
+            </div>
+        </form>
+
+    </div>
+
+
+</body>
+</html>

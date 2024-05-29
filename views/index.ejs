@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <%- include("navbar.ejs") %>
+
+        <h1>Our Products</h1>
+
+        <div class="second_section">
+            <div class="food_card">
+                <img src="/images/pizza.jpg" alt="">
+                <h2>Pizza</h2>
+                <form action="/searchfoodBtn" method="POST">
+                    <input type="hidden" name="input_btn" value="Pizza">
+                    <button type="submit">Order Now</button>
+                </form>
+            </div>
+            <div class="food_card">
+                <img src="/images/burger.jpg" alt="">
+                <h2>Burger</h2>
+                <form action="/searchfoodBtn" method="POST">
+                    <input type="hidden" name="input_btn" value="Burger">
+                    <button type="submit">Order Now</button>
+                </form>
+            </div>
+            <div class="food_card">
+                <img src="/images/thali.jpg" alt="">
+                <h2>Thali</h2>
+                <form action="/searchfoodBtn" method="POST">
+                    <input type="hidden" name="input_btn" value="Thali">
+                    <button type="submit">Order Now</button>
+                </form>
+            </div>
+            <div class="food_card">
+                <img src="/images/rolls.jpg" alt="">
+                <h2>Rolls</h2>
+                <form action="/searchfoodBtn" method="POST">
+                    <input type="hidden" name="input_btn" value="Rolls">
+                    <button type="submit">Order Now</button>
+                </form>
+            </div>
+        </div>
+        
+
+        <!-- about_section -->
+        <div class="about_section" id="about">
+            <h1>About <span>Foodie</span></h1>
+            <p><span>Foodie.com</span> is the ultimate culinary haven, an online platform where gastronomic enthusiasts embark on a delightful journey through the world of flavors. Whether you're a seasoned chef or a novice cook, Foodie.com serves as your trusted companion, offering a treasure trove of recipes, restaurant reviews, and cooking tips. From mouthwatering appetizers to decadent desserts, this vibrant hub celebrates the diversity of cuisines, inviting users to explore, indulge, and share their culinary experiences. With its user-friendly interface and curated content, Foodie.com caters to the cravings of every palate, fostering a community united by a shared passion for all things food.At Foodie.com, culinary exploration knows no bounds. Dive into a world of culinary adventures with our curated guides to local eateries, hidden gems, and global food trends. Whether you're craving the comforting familiarity of home-cooked meals or seeking inspiration for your next gourmet masterpiece, our extensive collection of recipes curated by top chefs and home cooks alike has you covered. Join the conversation in our lively forums, where food lovers from around the globe swap stories, tips, and recommendations, fostering a vibrant community united by their love for all things delicious. With Foodie.com, every meal is an opportunity to savor the extraordinary flavors of life.</p>
+        </div>
+
+
+        <!-- Contact Section -->
+        <h1>Contact Us</h1>
+        <div class="contact_section" id="contact">
+            <div class="image_contact">
+                <img src="/images/contact.jpg" alt="">
+            </div>
+            <form action="/contact" method="post">
+                <h1>Send Us a Message</h1>
+                <input type="text" name="fullname" id="contact_full_name" placeholder="Full Name">
+                <input type="email" name="email" id="contact_mobile" placeholder="E-mail">
+                <textarea name="message" id="contact_message" placeholder="Enter the message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <%- include("footer.ejs") %>
+
+    </div>
+
+    <script src="../js/nav.js"></script>
+
+</body>
+</html>

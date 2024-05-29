@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products at Foodie</title>
+    <link rel="stylesheet" href="/products.css">
+</head>
+<body>
+    
+    <h1>Enjoy the meals at Foodie.com</h1>
+    <div class="select_options">
+        <div class="filters">
+            <img src="/images/filter.png" alt="">
+            <h2>Filters: </h2>
+        </div>
+        <form id="foodForm" action="/foodSearch" method="post">
+            <select name="searchFood" onchange="document.getElementById('foodForm').submit();">
+                <option value="select">Select Food</option>
+                <option value="pizza">Pizza</option>
+                <option value="burger">Burger</option>
+                <option value="rolls">Rolls</option>
+                <option value="thali">Thali</option>
+            </select>
+        </form>
+        <button onclick="window.location.href = '/rating4plus';">Rating 4+</button>
+    </div>
+
+    <div class="container">
+        <% for(let i=0; i < items.length; i++) { %>
+            <input type="hidden" name="itemId" value="items[i].id">
+            <div class="product" onclick="window.location.href='/getItemId?itemId=<%= i %>'">
+                <img src="<%= items[i].image_url %>" alt="">
+                <div class="boxes">
+                    <div class="box1">
+                        <h2><%= items[i].name %></h2>
+                        <p><%= items[i].description %></p>
+                    </div>
+                    <div class="box2">
+                        <p>Rs.<%= items[i].price %></p>
+                        <p id="rating"><%= items[i].rating %><span style="font-size:100%;color:white;">&starf;</span></p>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+    
+
+</body>
+</html>
